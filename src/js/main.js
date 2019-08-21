@@ -1,3 +1,1 @@
-let a = document.getElementById('df');
-console.log(this);
-console.log(window);
+console.log(1);

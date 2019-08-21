@@ -1,0 +1,28 @@
+defaultTransition()
+    transition all arguments ease
+
+support-for-ie ?= true
+    opacity(n)
+      opacity n
+      if support-for-ie
+        filter unquote('progid:DXImageTransform.Microsoft.Alpha(Opacity=' + round(n * 100) + ')')
+
+pseudo()
+    content ''
+    display block
+    
+
+flexCenterCenter()
+    display: flex
+    justify-content center
+    align-items center
+
+uiTrns()
+    transition all 0.5s ease
+
+OpenSansBold()
+    font-family: OpenSansBold
+
+OpenSansLight()
+    font-family: OpenSansLight
+

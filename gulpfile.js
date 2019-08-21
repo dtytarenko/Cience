@@ -20,9 +20,8 @@ const	gulp         = require('gulp'),  //основной плагин gulp
 gulp.task('css', () => {
 	return gulp
 		.src([
-			'src/common/stylus/main.styl',
-			'src/common/stylus/index.styl',
-			'src/pages/**/*.styl',
+			'src/stylus/main.styl',
+			'src/pages/**/*.styl'
 		]) // массив путей
 		.pipe(plumber()) // отслеживание ошибок
 		.pipe(maps.init())
@@ -55,7 +54,7 @@ gulp.task('js', () =>
 			{suffix:'.min', dirname: ''})) // для переименования конечных файлов css и для изменения конечной структуры проекта
 		.pipe(uglify())
 		.pipe(maps.write())
-		.pipe(gulp.dest('dist'))
+		.pipe(gulp.dest('dist/js/'))
 );
 
 
@@ -140,7 +139,7 @@ gulp.task('clean', function() {
 //////////////////////////--START GENERAL TASK--//////////////
 
 gulp.task('watch', ['html','css','js', 'reload'], () => {
-	watch(['src/common/stylus/**/*.styl', 'src/components/**/*.styl'], ()  => gulp.start('css'));
+	watch(['src/stylus/**/*.styl', 'src/**/*.styl'], ()  => gulp.start('css'));
 	watch(['src/js/**/*.js'], ()  => gulp.start('js'));
 	watch(['src/pages/**/*.html', 'src/components/**/*.html'], () => gulp.start('html'));
 });
