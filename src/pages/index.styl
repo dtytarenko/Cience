@@ -15,9 +15,19 @@
     
     @media screen and (min-width tablet)
         top 50px
-        padding-left 40px
+        left 50%
+        transform: translateX(-50%)
         justify-content: flex-start
+        padding 0 40px
+
     
+    @media screen and (min-width laptop)
+        padding 0 105px
+
+    @media screen and (min-width desktop)
+        max-width 1100px
+        width 100%
+        padding 0
 
     &__link
         flexCenterCenter()
@@ -46,6 +56,12 @@
     background: linear-gradient(to right, rgba(0,0,0,.3), rgba(0,0,0,.3)), url('../assets/intro.jpg') no-repeat
     background-size: cover
 
+    @media screen and (min-width tablet)
+        background: linear-gradient(to right, rgba(0,0,0,.3), rgba(0,0,0,.3)), url('../assets/intro-desktop.jpg') no-repeat
+        background-position: 50%
+        background-size: cover
+        background-origin: content-box
+
     .container
         min-height: inherit
         padding-top: 120px
@@ -68,6 +84,10 @@
             line-height 50px
             margin-bottom 30px
             margin-top 0
+        
+        @media screen and (min-width laptop)
+            font-size 55px
+            line-height 60px
     
     &__btn
         flexCenterCenter()
@@ -89,9 +109,8 @@
             -webkit-tap-highlight-color: transparent
             
             &:after
-                width 20px
-                height 20px
-                top calc(50% - 3px)
+                width 17px
+                height 17px
             
             &:before
                 background-color: rgba(255, 255, 255, 0.4)
@@ -119,7 +138,7 @@
             background-image: url('../assets/arrow.svg')
             background-repeat: no-repeat
             background-size: cover
-            uiTrns()
+            transition: all 0.1s ease
 
 
 
@@ -135,9 +154,16 @@
 
         @media screen and (min-width tablet)
             padding-bottom 85px
+        
+        @media screen and (min-width desktop)
+            padding-top 70px
+            padding-bottom 130px
 
     &__title
         margin-bottom 40px
+        
+        @media screen and (min-width desktop)
+            margin-bottom 70px
 
 .service__list
     display flex
@@ -200,6 +226,10 @@
     @media screen and (min-width tablet)
         max-width initial
         width 100%
+    
+    @media screen and (min-width laptop)
+        font-size 30px
+        line-height 30px
 
 .service__list-item--text
     text-align center
@@ -225,6 +255,14 @@
     .container
         padding-bottom: 50px
 
+        @media screen and (min-width laptop)
+            display flex
+            flex-direction: column
+            align-items center
+            justify-content center
+        
+        
+
 .booking__img
     position: absolute
     top 0
@@ -240,12 +278,16 @@
     @media screen and (min-width tablet)
         top -50px
         left 0
-        transform: translate(-50%, 0)
         min-height 100%
         width 100%
         min-width calc(50% - 30px) //30px = margin-right
-        
-
+        transform: translate(-50%, 0)
+    
+    @media screen and (min-width 1280px)
+        top -70px
+        width 50%
+        min-width calc(50% - 30px) //30px = margin-right
+        transform: translate(0%)
 
 .booking__title
     margin 80px 0 15px
@@ -255,6 +297,13 @@
         align-self: flex-end
         text-align left
         padding-left 30px
+    
+    @media screen and (min-width laptop)
+        margin 65px 0 30px
+    
+    @media screen and (min-width desktop)
+       padding-left: 125px
+       margin 70px 0 20px
     
 .booking__text
     text-align center
@@ -271,6 +320,11 @@
         align-self: flex-end
         text-align left
         padding-left 30px
+    
+    @media screen and (min-width desktop)
+       padding-left: 125px
+       font-size 20px
+       line-height 30px
 
 .booking__btn
     flexCenterCenter()
@@ -292,13 +346,25 @@
         top 0
         left 0
         transform: translateX(calc(50% + 30px))
+    
+    @media screen and (min-width laptop)
+        margin-bottom 50px
+    
+    @media screen and (min-width desktop)
+       transform: translateX(calc(50% + 125px))
 
 .about
     .container
         padding-top: 20px
+        padding-bottom 40px
 
         @media screen and (min-width tablet)
             padding-top 50px
+            padding-bottom 25px
+        
+        @media screen and (min-width desktop)
+            padding-top 75px
+            padding-bottom 75px
 
 .about__list
     flexCenterCenter()
@@ -321,6 +387,9 @@
             @media screen and (min-width tablet)
                 margin-right 35px
                 justify-content center
+            
+            @media screen and (min-width tablet)
+                justify-content: flex-start
                 
         &:nth-child(even)
             @media screen and (min-width tablet)
@@ -379,12 +448,27 @@
     @media screen and (min-width tablet)
         text-align left
         letter-spacing: -0.56px
+    
+    @media screen and (min-width laptop)
+        letter-spacing 0px
+        font-size 22px
+        line-height 55px
+    
+    @media screen and (min-width desktop)
+        font-size: 25px
 
 .about__title
     margin-bottom 20px
 
     @media screen and (min-width tablet)
         margin-bottom 35px
+    
+    @media screen and (min-width laptop)
+        margin-bottom 50px
+    
+    @media screen and (min-width desktop)
+        margin-bottom 70px
+    
 
 .about__video
     margin-bottom: 50px
@@ -397,6 +481,17 @@
     @media screen and (min-width tablet)
         padding: 0 60px
         margin-bottom 70px
+    
+    @media screen and (min-width laptop)
+        min-height: 511px
+        margin-bottom 75px
+        padding 0 100px
+    
+    @media screen and (min-width tablet)
+        min-height: 545px
+        padding 0 65px
+    
+    
 
 .about__client
     padding: 0 15px
@@ -416,23 +511,33 @@
             flex 33%
             min-width: 33%
             margin-bottom 25px
+        
+        @media screen and (min-width laptop)
+            flex initial
+            min-width: initial
+            margin-bottom 0
+        
 
-        &:last-of-type,
-        &:nth-last-child(n+1)
-            margin-bottom: 40px
 
-            @media screen and (min-width tablet)
-                margin-bottom 25px
+        
     
     @media screen and (min-width tablet)
         margin 0 60px
         width 100%
         align-items: flex-end
+    
+    @media screen and (min-width laptop)
+        padding 0
 
 .calendar
     .container
         padding-top 30px
         padding-bottom: 80px
+
+        @media screen and (min-width desktop)
+            padding-top 70px
+            padding-bottom 180px
+
     
     &__title
         margin-bottom 30px
@@ -452,3 +557,6 @@
         font-weight: 300
         letter-spacing: -0.14px
         line-height: 25px
+    
+    @media screen and (min-width desktop)
+        padding 0 0 60px

@@ -7,12 +7,18 @@ body
 .container
     max-width inherit
     width 100%
-    box-sizing: border-box
     margin 0 auto
     padding 0 15px
 
     @media screen and (min-width tablet)
         padding 0 40px
+    
+    @media screen and (min-width laptop)
+        padding 0 100px
+    
+    @media screen and (min-width desktop)
+        max-width 1100px
+        padding 0
         
 .about,
 .booking,
@@ -41,6 +47,14 @@ section:nth-of-type(odd)
         font-size: 30px
         line-height 40px
 
+    @media screen and (min-width laptop)
+        font-size 35px
+        line-height 45px
+    
+    @media screen and (min-width desktop)
+        font-size 40px
+        line-height 55px
+
 .about__title,
 .service__title
     color: #2d2d2d
@@ -50,8 +64,8 @@ section:nth-of-type(odd)
     line-height: 55px
     text-transform: uppercase
     position relative
+    text-transform uppercase
     font-family: OpenSans, sans-serif
-
     
     
     &:after
@@ -62,14 +76,29 @@ section:nth-of-type(odd)
         width calc(100% - 154px) //154px margin from design
         height 2px
         background-color: #c49b1d
+    
+    @media screen and (min-width laptop)
+        font-size 30px
+        line-height 55px
+        letter-spacing: 3px
+    
+    @media screen and (min-width desktop)
+        font-size 35px
+        letter-spacing: 3.5px
 
 
 .calendly-inline-widget
     width 100%
+    max-height: 550px
 
+    @media screen and (min-width 540px)
+        max-height: initial
+        min-height: 700px
+    
+    @media screen and (min-width 880px)
+        min-height: 570px
+        max-height 570px
+    
     .profile-info-event-type-name
-        color: #2d2d2d
-        font-family OpenSansLight, sans-serif
-        font-size: 14px
-        font-weight: 30
-        line-height: 36px
+        color red
+    
