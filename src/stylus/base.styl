@@ -7,10 +7,13 @@ body
 .container
     max-width inherit
     width 100%
-    padding 0 15px 0 15px
     box-sizing: border-box
     margin 0 auto
+    padding 0 15px
 
+    @media screen and (min-width tablet)
+        padding 0 40px
+        
 .about,
 .booking,
 .container,
@@ -27,12 +30,16 @@ section:nth-of-type(odd)
 .calendar__title,
 .booking__title
     color: #ffffff
-    font-family: OpenSansLight
+    font-family: OpenSansLight, sans-serif
     font-size: 28px
     font-weight: 300
     line-height: 38px
     text-align center
     white-space: pre-line
+
+    @media screen and (min-width tablet)
+        font-size: 30px
+        line-height 40px
 
 .about__title,
 .service__title
@@ -43,7 +50,9 @@ section:nth-of-type(odd)
     line-height: 55px
     text-transform: uppercase
     position relative
-    OpenSansLight()
+    font-family: OpenSans, sans-serif
+
+    
     
     &:after
         pseudo()
@@ -53,3 +62,14 @@ section:nth-of-type(odd)
         width calc(100% - 154px) //154px margin from design
         height 2px
         background-color: #c49b1d
+
+
+.calendly-inline-widget
+    width 100%
+
+    .profile-info-event-type-name
+        color: #2d2d2d
+        font-family OpenSansLight, sans-serif
+        font-size: 14px
+        font-weight: 30
+        line-height: 36px
