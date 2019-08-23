@@ -4,5 +4,5 @@
 #
 #
 # to deploy the project:
-#"npm install" 
-#"gulp watch"
+# "npm install" 
+# "gulp watch"
