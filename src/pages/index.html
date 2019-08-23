@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="noindex">
     <title>Document</title>
     <link rel="stylesheet" href="css/main.min.css">
     <link rel="stylesheet" href="css/index.min.css">
@@ -35,14 +36,14 @@
         </a>
     </header>
 
-    <main class="main">
-        <section class="intro">
+    <main class="main" id="main">
+        <section class="intro" id="intro">
             <div class="container">
                  
 
                 <h1 class="intro__text">Lorem ipsum dolor sit consectetur adipiscing elit nullam sagittis.</h1>
 
-                <button class="intro__btn"></button>
+                <button class="intro__btn" id="intro__btn"></button>
 
 
             </div>
@@ -50,10 +51,10 @@
         </section>
 
 
-        <section class="service">
+        <section class="service" id="service">
             <div class="container">
                 <h2 class="service__title">DONEC UT FINIBUS VELIT</h2>
-                <ul class="service__list">
+                <ul class="service__list" id="service__list">
                     <li class="service__list-item">
                         <h3 class="service__list-item--title">Service A</h3>
                         <p class="service__list-item--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at gravida arcu, ac tempor neque. Maecenas massa sem, tincidunt a quam ut, tincidunt viverra purus suspendisse congue.</p>
@@ -73,7 +74,7 @@
 
         <section class="booking">
             <div class="container">
-                <img src="assets/booking__img.jpg" alt="travel" class="booking__img">
+                <img src="assets/img/booking__img.jpg" alt="travel" class="booking__img">
 
                 <h2 class="booking__title">Lorem ipsum dolor sit amet, consectetur elit eleifend mauris.</h2>
 
@@ -83,7 +84,7 @@
                 <p class="booking__text">Sed nec iaculis leo, in luctus ipsum. Sed eu neque consectetur, mollis neque vel, ultrices quam. Donec ullamcorper consectetur lacinia. Praesent laoreet enim eget leo suscipit, at bibendum elit egestas. Cras euismod congue nunc id convallis.
                 </p>
 
-                <a href="#" class="booking__btn">BOOK A MEETING</a>
+                <button class="booking__btn" id="booking__btn">BOOK A MEETING</button>
             </div>
             
 
@@ -120,32 +121,32 @@
                 <ul class="about__client">
                     <li class="about__client-item">
                         <a href="#" class="about__client-item--link">
-                            <img src="assets/client-logo1.svg" alt="Veniam" class="about__client-item--img">
+                            <img src="assets/img/client-logo1.svg" alt="Veniam" class="about__client-item--img">
                         </a>
                     </li>
                     <li class="about__client-item">
                         <a href="#" class="about__client-item--link">
-                            <img src="assets/client-logo4.svg" alt="Alpha" class="about__client-item--img">
+                            <img src="assets/img/client-logo4.svg" alt="Alpha" class="about__client-item--img">
                         </a>
                     </li>
                     <li class="about__client-item">
                         <a href="#" class="about__client-item--link">
-                            <img src="assets/client-logo2.svg" alt="Fugiat" class="about__client-item--img">
+                            <img src="assets/img/client-logo2.svg" alt="Fugiat" class="about__client-item--img">
                         </a>
                     </li>
                     <li class="about__client-item">
                         <a href="#" class="about__client-item--link">
-                            <img src="assets/client-logo5.svg" alt="Connect" class="about__client-item--img">
+                            <img src="assets/img/client-logo5.svg" alt="Connect" class="about__client-item--img">
                         </a>
                     </li>
                     <li class="about__client-item">
                         <a href="#" class="about__client-item--link">
-                            <img src="assets/client-logo3.svg" alt="Aquatree" class="about__client-item--img">
+                            <img src="assets/img/client-logo3.svg" alt="Aquatree" class="about__client-item--img">
                         </a>
                     </li>
                     <li class="about__client-item">
                         <a href="#" class="about__client-item--link">
-                            <img src="assets/client-logo6.svg" alt="Spine" class="about__client-item--img">
+                            <img src="assets/img/client-logo6.svg" alt="Spine" class="about__client-item--img">
                         </a>
                     </li>
                 </ul>
@@ -154,25 +155,41 @@
         </section>
 
 
-        <section class="calendar">
+        <section class="calendar" id="calendar">
             <div class="container">
 
                 <h2 class="calendar__title">Vestibulum ornare nec enim at viverra
                         integer non quam euismod.</h2>
-                <div class="calendly-inline-widget" data-url="https://calendly.com/specimen/30min" style="min-width:290px;height:630px;"></div>
-                
+                <div id="calendar__widget" class="calendly-inline-widget" data-url="https://calendly.com/specimen/30min" style="height:630px;"></div>
             </div>
             
         </section>
 
         
+        
     </main>
 
     <footer class="footer">
-        <p class="footer__text">© 2019 FlagHike • All Rights Reserved</p>
+        <svg class="footer__img" viewBox="0 0 70 59">
+                <g>
+                     <g>
+                        <path fill="#fff" d="M37.35 43.509l-.374 3.82-8.544 4.793H3.302l9.036-13.538 
+                        2.715-7.062 6.598-2.754 4.103-8.116 9.642-5.876-4.102 13.162 9.689 
+                        10.05zm-.905-41.721c.428-.141.85-.21 1.28-.21 1.241 0 2.391.58 3.609 1.194 
+                        1.18.595 2.396 1.208 3.785 1.336a10.08 10.08 0 0 1-1.938 1.581l-.715.443.642.904c.63.887 
+                        1.273 1.794 2.04 2.617-1.052-.127-2.053-.632-3.104-1.162-1.329-.67-2.702-1.362-4.319-1.362-.432 
+                        0-.857.049-1.28.148zm15.548 41.217L47.108 29.58l-5.574-6.087-5.089-10.621V8.917c.428-.14.85-.21 
+                        1.28-.21 1.241 0 2.391.58 3.608 1.193 1.327.67 2.7 1.362 4.313 1.362.528 0 1.06-.077 
+                        1.579-.23l1.513-.442-1.261-.946c-1.11-.832-1.937-1.917-2.77-3.082 1.107-.808 1.983-1.768 
+                        2.91-2.92l1.576-1.958-2.411.705c-.381.112-.753.166-1.136.166-1.238 0-2.386-.58-3.602-1.192C40.715.693 
+                        39.34 0 37.724 0c-.81 0-1.591.172-2.389.527l-.468.208v12.24L24.601 19.23l-4.042 
+                        7.993-6.695 2.794-2.916 7.588L0 54.005h65z"/>
+                    </g>
+                </g>
+            </svg>
+        <p class="footer__text">© 2019 FlagHike • All Rights Reserved сластишки</p>
     </footer>
     
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
     <script type="text/javascript" src="js/main.min.js"></script>
 </body>
